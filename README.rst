@@ -31,6 +31,8 @@ source miniconda2/bin/activate
 
 conda update --yes conda
 
+#Manually install rdkit
+
 conda install -y -c rdkit rdkit=2016.03.3
 
 
@@ -43,33 +45,36 @@ cd D3R
 
 git branch jeffdev
 
+git pull origin jeffdev
+
 make dist
+
+cd dist
 
 pip install d3r-1.5.0-py2.py3-none-any.whl
 
 cd ../
 
+cd ../
 
 
 #Get cookiecutter
 
 pip install cookiecutter
 
-pip install cookiecutter
-
 cookiecutter https://github.com/drugdata/cookiecutter-pycustomdock.git
 
-
+## (Follow prompts) ##
 
 ### (Implement prep and docking functions here) ###
 
-#Test docking solution
+#Test functions
 
 Go into test_data 
 
 . test.sh
 
-Note: Evaluation fails because miniconda doesn’t see openeye.oechem python
+Note: Evaluation fails because miniconda doesn’t see openeye.oechem 
 
 
 
