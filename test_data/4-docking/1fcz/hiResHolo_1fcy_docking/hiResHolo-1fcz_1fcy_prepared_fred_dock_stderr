@@ -1,0 +1,51 @@
+          :jGf:                .o88o.                          .o8
+        :jGDDDDf:              888 `'                         '888
+      ,fDDDGjLDDDf,           o888oo  oooo d8b  .ooooo.   .oooo888
+    ,fDDLt:   :iLDDL;          888    `888""8P d88' `88b d88' `888
+  ;fDLt:         :tfDG;        888     888     888ooo888 888   888
+,jft:   ,ijfffji,   :iff       888     888     888    .o 888   888
+     .jGDDDDDDDDDGt.          o888o   d888b    `Y8bod8P' `Y8bod88P'
+    ;GDDGt:''':tDDDG,         
+   .DDDG:       :GDDG.         Copyright (c) 2003-2012
+   ;DDDj         tDDDi         OpenEye Scientific Software, Inc.
+   ,DDDf         fDDD,         Version: 3.0.1
+    LDDDt.     .fDDDj          Build date 20120919
+    .tDDDDfjtjfDDDGt           OEChem version: 1.8.0
+      :ifGDDDDDGfi.            Platform: redhat-RHEL6-g++4.4-x64
+          .:::.                Supported Run Modes:
+  ......................         Single processor
+  DDDDDDDDDDDDDDDDDDDDDD         MPI Multiprocessor
+  DDDDDDDDDDDDDDDDDDDDDD       
+
+  Licensed for the exclusive use of The Laboratory of Rommie Amaro.
+  Licensed for use only in University of California, San Diego.
+  License expires on July 25, 2017.
+
+----------------------------------------
+#Interface settings
+
+#Input :   
+    -receptor  /celpp/j5wagner/2016_07_22_OEDock_implementation/celppadeTest/jeffs_fred_implementation/test_data/4-docking/1fcz/hiResHolo_1fcy_tech_prep/hiResHolo-1fcz_1fcy_prepared.oeb.gz
+    -dbase  /celpp/j5wagner/2016_07_22_OEDock_implementation/celppadeTest/jeffs_fred_implementation/test_data/4-docking/1fcz/lig_156_tech_prep/lig_156_prepared.sdf
+
+#Output Files :   
+    -docked_molecule_file  hiResHolo-1fcz_1fcy_prepared_docked.sdf
+
+Run settings written to : fred_settings.param
+Run status will periodically be written to : fred_status.txt
+Running in single processor mode
+Docking to receptor /celpp/j5wagner/2016_07_22_OEDock_implementation/celppadeTest/jeffs_fred_implementation/test_data/4-docking/1fcz/hiResHolo_1fcy_tech_prep/hiResHolo-1fcz_1fcy_prepared.oeb.gz
+.1 docked (22.8sec/lig)
+
+--------Finished docking--------
+Docking report for receptor /celpp/j5wagner/2016_07_22_OEDock_implementation/celppadeTest/jeffs_fred_implementation/test_data/4-docking/1fcz/hiResHolo_1fcy_tech_prep/hiResHolo-1fcz_1fcy_prepared.oeb.gz
+  Molecules Docked : 1
+
+  Docking time : 22s (22.8seconds total)
+  Docking time per molecule 22.8sec
+  Score file (text) : fred_score.txt
+  Docked molecule structure file : hiResHolo-1fcz_1fcy_prepared_docked.sdf
+  Scores tagged to SD Data with tag : "FRED Chemgauss4 score"
+
+Done.
+Finished

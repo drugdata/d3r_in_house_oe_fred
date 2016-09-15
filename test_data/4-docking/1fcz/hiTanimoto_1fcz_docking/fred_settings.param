@@ -1,0 +1,33 @@
+# Parameters settings for FRED 3.0.1
+#
+#Interface settings
+
+#Execute Options :   
+    #-param (Not set, no default)
+
+#Input :   
+    -receptor  /celpp/j5wagner/2016_07_22_OEDock_implementation/celppadeTest/jeffs_fred_implementation/test_data/4-docking/1fcz/hiTanimoto_1fcz_tech_prep/hiTanimoto-1fcz_1fcz_prepared.oeb.gz
+    -dbase  /celpp/j5wagner/2016_07_22_OEDock_implementation/celppadeTest/jeffs_fred_implementation/test_data/4-docking/1fcz/lig_156_tech_prep/lig_156_prepared.sdf
+    #-conftest  isomeric
+    #-molnames (Not set, no default)
+
+#Dock Options :   
+    #-dock_resolution  Standard
+
+#Output Files :   
+    -docked_molecule_file  hiTanimoto-1fcz_1fcz_prepared_docked.sdf
+    #-undocked_molecule_file  undocked.oeb.gz
+    #-score_file  score.txt
+    #-report_file  report.txt
+    #-settings_file  settings.param
+    #-status_file  status.txt
+
+#Output Options :   
+    #-hitlist_size  500
+    #-num_poses  1
+    #-annotate_scores  false
+    #-score_tag (Not set, no default)
+    #-save_component_scores  false
+    #-no_extra_output_files  false
+    #-no_dots  false
+    #-prefix  fred
