@@ -17,7 +17,7 @@ Usage
 Installation
 ------------
 
-** Here I implement oedock and omegaprep using cookiecutter
+** Here I implement oedock and omegaprep using cookiecutter **
 
 #Get a miniconda
 
