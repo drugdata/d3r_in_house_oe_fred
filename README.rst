@@ -17,6 +17,51 @@ Usage
 Installation
 ------------
 
+## Here I implement oedock and omegaprep using cookiecutter
+#Get a miniconda
+wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+bash Miniconda2-latest-Linux-x86_64.sh -b -p miniconda2
+# turn on the root environment
+source miniconda2/bin/activate
+conda update --yes conda
+conda install -y -c rdkit rdkit=2016.03.3
+
+#Install most current d3r jeffdev
+git clone git@github.com:drugdata/D3R.git
+cd D3R
+git branch jeffdev
+make dist
+pip install d3r-1.5.0-py2.py3-none-any.whl
+cd ../
+
+#Get cookiecutter
+pip install cookiecutter
+pip install cookiecutter
+cookiecutter https://github.com/drugdata/cookiecutter-pycustomdock.git
+
+### (Implement prep and docking functions here) ###
+#Test docking solution
+Go into test_data 
+. test.sh
+Note: Evaluation fails because miniconda doesn’t see openeye.oechem python
+
+### Yay! Tests work ###
+
+## Upload onto new github repo
+#(Go on github, make new repo called "drugdata/jeffs_fred_implementation"
+#(cd into top level dir)
+git init
+#(REMOVE BULKY TEST DATA) 
+rm -r test_data/?-*
+git add ./*
+git add .gitignore 
+git commit -a -m “first commit”
+git remote add origin git@github.com:drugdata/jeffs_fred_implementation.git
+git push -u origin master
+
+
+
+
 Requirements
 ^^^^^^^^^^^^
 
