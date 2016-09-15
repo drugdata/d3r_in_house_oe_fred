@@ -1,2 +1,0 @@
-Title	FRED Chemgauss4 score
-omega_1	-6.209435

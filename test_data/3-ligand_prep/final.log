@@ -1,2 +1,0 @@
-09/14/16 10:00:52: Running omega command: omega2 -flipper true -in lig_156.smi -out lig_156_prepared.sdf 2> lig_156_omega_confgen_stderr 1> lig_156_omega_confgen_stdout
-09/14/16 10:00:55: Successfully prepared ligand lig_156 for target 1fcz

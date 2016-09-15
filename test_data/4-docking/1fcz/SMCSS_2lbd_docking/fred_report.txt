@@ -1,9 +1,0 @@
-Docking report for receptor /celpp/j5wagner/2016_07_22_OEDock_implementation/celppadeTest/jeffs_fred_implementation/test_data/4-docking/1fcz/SMCSS_2lbd_tech_prep/SMCSS-1fcz_2lbd_prepared.oeb.gz
-  Molecules Docked : 1
-
-  Docking time : 21s (21.5seconds total)
-  Docking time per molecule 21.5sec
-  Score file (text) : fred_score.txt
-  Docked molecule structure file : SMCSS-1fcz_2lbd_prepared_docked.sdf
-  Scores tagged to SD Data with tag : "FRED Chemgauss4 score"
-
