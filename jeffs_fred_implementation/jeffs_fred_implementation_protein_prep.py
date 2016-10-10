@@ -11,9 +11,18 @@ class no_prot_prep(ProteinPrep):
     for CELPP
     """
     ProteinPrep.OUTPUT_PROT_SUFFIX = '.pdb'
-    def prepare_protein(self, protein_file, prepared_protein_file, info_dic={}):
-        
-        return super(no_prot_prep,self).prepare_protein(protein_file, prepared_protein_file, info_dic=info_dic)
+    def prepare_protein(self, protein_file, prepared_protein_file, targ_info_dict={}):
+        # Poor man's receptor splitting - Remove all HETATM and
+        # CONECT lines
+        data = open(protein_file).readlines()
+        with open(prepared_protein_file,'wb') as of:
+            for line in data:
+                if (line[:6] == 'HETATM') or (line[:6] == 'CONECT'):
+                    continue
+                else:
+                    of.write(line)
+        return True
+        #return super(no_prot_prep,self).prepare_protein(protein_file, prepared_protein_file, info_dic=info_dic)
 
 
 

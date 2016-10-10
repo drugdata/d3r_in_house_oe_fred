@@ -10,13 +10,12 @@ class omega_lig_prep(LigandPrep):
     """
     LigandPrep.OUTPUT_LIG_SUFFIX = '.sdf'
 
-    def ligand_scientific_prep(self, lig_smi_file, out_lig_file, info_dic={}):
+    def ligand_scientific_prep(self, lig_smi_file, out_lig_file, targ_info_dict={}):
         """Ligand scientific preparation
         :param sci_prepped_lig: Scientifically prepared ligand file
         :returns: This implementation merely returns the value of
         `sci_prepped_lig` in a list
         """
-
         import commands
         lig_prefix = os.path.basename(lig_smi_file).replace('.smi','')
 

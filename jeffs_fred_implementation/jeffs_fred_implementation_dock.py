@@ -15,7 +15,7 @@ class oe_fred_dock(Dock):
     Dock.SCI_PREPPED_PROT_SUFFIX = '_prepared.pdb'
 
 
-    def lig_technical_prep(self, sci_prepped_lig):
+    def lig_technical_prep(self, sci_prepped_lig, targ_info_dict={}):
         """Technical preparation" is the step immediate preceding
         docking. During this step, you should perform any file
         conversions or processing that are specific to your docking
@@ -25,9 +25,13 @@ class oe_fred_dock(Dock):
         `sci_prepped_lig` in a list
         """
         return super(oe_fred_dock,
-                     self).lig_technical_prep(sci_prepped_lig)
+                     self).lig_technical_prep(sci_prepped_lig,
+                                              targ_info_dict=targ_info_dict)
 
-    def receptor_technical_prep(self, sci_prepped_receptor, pocket_center):
+    def receptor_technical_prep(self, 
+                                sci_prepped_receptor, 
+                                pocket_center, 
+                                targ_info_dict={}):
         """Technical preparation" is the step immediately preceding
         docking. During this step, you should perform any file
         conversions or processing that are specific to your docking
@@ -40,9 +44,8 @@ class oe_fred_dock(Dock):
         # box file (for the docking) and the original scientifically
         # prepped ligand pdb, as that's the easiest way to return the
         # final receptor conformation.
- # For FRED, receptor_technical_prep takes a scientifically
+        # For FRED, receptor_technical_prep takes a scientifically
         # prepared pdb file and creates a docking grid.
-
         receptor_prefix = sci_prepped_receptor.replace('.pdb','')
         docking_box_file = receptor_prefix + '.oeb.gz'
 
@@ -93,7 +96,12 @@ class oe_fred_dock(Dock):
         # final receptor conformation.
         return [docking_box_file, sci_prepped_receptor]
 
-    def dock(self, tech_prepped_lig_list, tech_prepped_receptor_list, output_receptor_pdb, output_lig_mol):
+    def dock(self, 
+             tech_prepped_lig_list, 
+             tech_prepped_receptor_list, 
+             output_receptor_pdb, 
+             output_lig_mol,
+             targ_info_dict={}):
         """# The dock step needs to run the actual docking algorithm. Its first two
         # arguments are the return values from the technical preparation
         # functions for the ligand and receptor. The outputs from this
@@ -102,7 +110,6 @@ class oe_fred_dock(Dock):
         # specified in the output_ligand_mol argument.
         :returns: Always returns False
         """
-
         tech_prepped_grid = tech_prepped_receptor_list[0]
         sci_prepped_receptor = tech_prepped_receptor_list[1]
         receptor_prefix = os.path.basename(tech_prepped_grid).replace('.oeb.gz','')
