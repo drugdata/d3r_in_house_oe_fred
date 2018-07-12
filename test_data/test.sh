@@ -21,7 +21,7 @@ mkdir 4-docking
 python ../jeffs_fred_implementation/jeffs_fred_implementation_dock.py --protsciprepdir 2-protein_prep --ligsciprepdir 3-ligand_prep --outdir  4-docking
 
 mkdir 5-pack_docking_results
-packdockingresults.py --dockdir 4-docking --packdir 5-pack_docking_results --challengedata 1-get_challenge_data -f jeffs_ftp_config
+packdockingresults.py --dockdir 4-docking --packdir 5-pack_docking_results --challengedata 1-get_challenge_data 
 
 ## This won't work without openeye
 #mkdir 6-evaluate_docking_results

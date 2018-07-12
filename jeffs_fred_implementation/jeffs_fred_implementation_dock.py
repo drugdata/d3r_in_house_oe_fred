@@ -15,7 +15,7 @@ class oe_fred_dock(Dock):
     Dock.SCI_PREPPED_PROT_SUFFIX = '_prepared.pdb'
 
 
-    def lig_technical_prep(self, sci_prepped_lig, targ_info_dict={}):
+    def ligand_technical_prep(self, sci_prepped_lig, targ_info_dict={}):
         """Technical preparation" is the step immediate preceding
         docking. During this step, you should perform any file
         conversions or processing that are specific to your docking
@@ -25,7 +25,7 @@ class oe_fred_dock(Dock):
         `sci_prepped_lig` in a list
         """
         return super(oe_fred_dock,
-                     self).lig_technical_prep(sci_prepped_lig,
+                     self).ligand_technical_prep(sci_prepped_lig,
                                               targ_info_dict=targ_info_dict)
 
     def receptor_technical_prep(self, 
@@ -57,7 +57,7 @@ class oe_fred_dock(Dock):
         # box is defined by a .xyz file with two atoms specifying the
         # corners
         box_xyz_file = 'box.xyz'
-        box_size = 30.
+        box_size = 15.
         corner_1 = (float(pocket_center[0]) - (box_size / 2),
                     float(pocket_center[1]) - (box_size / 2),
                     float(pocket_center[2]) - (box_size / 2))
