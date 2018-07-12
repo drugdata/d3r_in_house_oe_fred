@@ -1,4 +1,4 @@
-jeffs_fred_implementation
+d3r_in_house_oe_fred
 =========================
 
 .. image:: https://img.shields.io/pypi/v/jeffs_fred_implementation.svg
